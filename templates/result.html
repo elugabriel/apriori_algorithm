@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color: rgb(248, 244, 244);">
+    <div class="container"> 
+        <div class="container text-center mt-4 p-8 text-blue rounded">
+            <h1 class="text-center"><strong>News Classification System</strong></h1>
+            <div class="container">
+                    <em>
+                       
+                        <p>A news classification system automatically categorizes news articles based on their content using machine learning and 
+                            natural language processing. It saves time by efficiently processing a large volume of articles and enabling 
+                            users to access news based on their interests. The system requires a labeled dataset for training and uses
+                            features like keywords or word embeddings. Machine learning algorithms are applied, such as Naive Bayes
+                            or deep learning models, to train a classification model. The trained model predicts the category of 
+                            new articles. News classification systems have applications in personalized recommendation, content organization, 
+                            sentiment analysis, and trend analysis, improving the accessibility and usability of news content.</p>
+                       
+                    
+                </em>
+            </div>
+        </div>
+         <br>
+         <p></p>
+        <form id="prediction-form" action="/predict" method="POST">
+           <div class="mb-3">
+                <label for="news" class="form-label">Write or paste the news below</label><br>
+                <textarea rows="10" cols="120" name="news"></textarea>
+            </div>
+
+            
+            <div class="form-group text-center">
+                <input type="submit" value="Classify" class="btn btn-primary btn-lg" >
+            </div>
+   
+        </form>
+         <div id="prediction-result">
+                <h2>The News is classified as : {{ prediction }}</h2><br>
+               
+
+            </div>
+    </div>
+</body>
+</html>
