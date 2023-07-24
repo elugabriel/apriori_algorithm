@@ -1,0 +1,27 @@
+/* Reset default margin and padding for the list */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the navigation bar */
+  nav {
+    background-color: blue;
+  }
+  
+  /* Style the navigation links (anchors) */
+  nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: right; /* Align the links to the right */
+  }
+  
+  /* Change the link color to black on hover */
+  nav a:hover {
+    background-color: black;
+    color: white;
+  }
+  
