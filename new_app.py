@@ -150,5 +150,21 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
 
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        # Process the form data or send an email, etc.
+        # (You can add the necessary code to handle the form submission)
+
+        # For this example, we will simply print the form data
+        #print(f"Name: {name}\nEmail: {email}\nMessage: {message}")
+
+        #Details = {"Name": name, "Email": email, "Message": message}
+
+    return render_template('contact.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=8000)

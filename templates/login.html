@@ -33,8 +33,8 @@
   
   <form method="POST" action="{{ url_for('login') }}">
     <div class="form-group mb-3">
-      <label for="username" class="form-label">User Name:</label>
-      <input type="text" name="username" id="email"  required size="50">
+      <label for="password" class="form-label">User Name:</label>
+      <input type="password" name="username" required id="inputPassword5"  aria-labelledby="passwordHelpBlock" size="50">
     </div>
     <div class="form-group mb-3">
       <label for="password" class="form-label">Password:</label>
@@ -49,6 +49,7 @@
 <div class="form-group container">
   <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
 </div>
+
 
 </body>
 </html>

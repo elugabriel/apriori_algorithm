@@ -13,15 +13,42 @@
 </head>
 <body  style="background-image: url('static/2.PNG');background-repeat: no-repeat; margin: 0;padding: 0;background-size: cover;background-position: center;">
 
-  <div class="navigation">
-    <ul>
-      <li><a href="{{ url_for('login') }}">Home</a></li>
-      <li><a href="{{ url_for('about') }}">About US</a></li>
-      <li><a href="{{ url_for('contact') }}">Contact US</a></li>
-    </ul>
-  </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="{{ url_for('login') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+        </div>
+            <div style="background-color: white;" class="container">
+                <br>
+                <br>
+                <section class="contact-section">
+                    <h2><strong>Contact Us</strong></h2>
+                    <p><em>Got a question or want to know more about our services? Contact us using the form below or send us an email.</em></p>
+                
+                    <form action="/send_message" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                            
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <br>
 
-
-
+                        <button type="submit">Send Message</button>
+                    </form>
+                </section>
+        
+            </div>     
+        </div>
+        
+    <footer>
+        <p>Contact us today to learn more about our services and how we can help you achieve your data analysis goals.</p>
+        <p>Email: contact@dataanalysishub.com</p>
+    </footer>
 </body>
 </html>

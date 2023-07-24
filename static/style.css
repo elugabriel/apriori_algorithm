@@ -185,4 +185,28 @@ body{
   textarea {
     resize: vertical;
   }
+
+  section.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 80px;
+  }
   
+  section.contact-section h2 {
+    margin-top: 0;
+  }
+  
+  footer {
+    background-image: url(2.PNG);
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;"
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    clear: both; /* Add clear property to ensure the footer clears floated elements */
+  }
